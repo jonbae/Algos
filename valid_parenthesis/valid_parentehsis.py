@@ -1,19 +1,21 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        stack = [] 
+        stack = []
         closing = {
-            ")":"(",
-            "]":"[",
-            "}":"{"
+            ")": "(",
+            "]": "[",
+            "}": "{"
         }
-        for char in s: 
+        for char in s:
+            print(char)
             if(len(stack) == 0):
                 stack.append(char)
-            elif(stack[-1] == closing[char]): 
+            elif(stack[-1] == closing[char]):
                 stack.pop()
             else:
                 stack.append(char)
         return len(stack) == 0
-                
-        
-    print(isValid(self,"[)"))
+
+
+x = Solution()
+x.isValid()
